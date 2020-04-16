@@ -1,5 +1,7 @@
 import { BitField, BitFieldObject } from '@klasa/bitfield';
 
+export type MessageFlagsResolvable = keyof typeof MessageFlags.FLAGS | number | BitFieldObject | ((keyof typeof MessageFlags.FLAGS) | number | BitFieldObject)[];
+
 export class MessageFlags extends BitField<MessageFlagsResolvable> {
 
 	public static FLAGS = {
@@ -11,5 +13,3 @@ export class MessageFlags extends BitField<MessageFlagsResolvable> {
 	} as const;
 
 }
-
-export type MessageFlagsResolvable = keyof typeof MessageFlags.FLAGS | number | BitFieldObject | ((keyof typeof MessageFlags.FLAGS) | number | BitFieldObject)[];

@@ -1,5 +1,7 @@
 import { BitField, BitFieldObject } from '@klasa/bitfield';
 
+export type PermissionsResolvable = keyof typeof Permissions.FLAGS | number | BitFieldObject | ((keyof typeof Permissions.FLAGS) | number | BitFieldObject)[];
+
 export class Permissions extends BitField<PermissionsResolvable> {
 
 	/**
@@ -55,5 +57,3 @@ export class Permissions extends BitField<PermissionsResolvable> {
 	public static DEFAULT = 104324673;
 
 }
-
-export type PermissionsResolvable = keyof typeof Permissions.FLAGS | number | BitFieldObject | ((keyof typeof Permissions.FLAGS) | number | BitFieldObject)[];
