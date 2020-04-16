@@ -1,0 +1,15 @@
+{
+	"extends": "eslint-config-bamboo",
+	"compilerOptions": {
+		"target": "ES2019",
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedParameters": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true
+	},
+	"include": [
+		"src/**/*.ts"
+	]
+}

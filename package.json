@@ -1,0 +1,43 @@
+{
+  "name": "@gawesomebot/discord-lib",
+  "version": "1.0.0",
+  "description": "The Discord library that powers GAwesomeBot v5",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc",
+    "test:lint": "eslint --ext ts src",
+    "lint": "eslint --fix --ext ts src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GAwesomeBot/discord-lib.git"
+  },
+  "devDependencies": {
+    "@klasa/dapi-types": "^0.0.3",
+    "@types/node": "13.11.1",
+    "@types/node-fetch": "^2.5.6",
+    "@types/ws": "^7.2.4",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "eslint": "^6.8.0",
+    "eslint-config-bamboo": "^3.0.0",
+    "typescript": "^3.9.0-dev.20200416"
+  },
+  "author": "GAwesomeBot Team (https://github.com/orgs/GAwesomeBot/people)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/GAwesomeBot/discord-lib/issues"
+  },
+  "homepage": "https://github.com/GAwesomeBot/discord-lib#readme",
+  "dependencies": {
+    "@klasa/bitfield": "^0.0.2",
+    "@klasa/cache": "^0.0.1",
+    "@klasa/rest": "^0.1.0",
+    "@klasa/snowflake": "^0.0.1",
+    "@klasa/timer-manager": "^0.0.1",
+    "@klasa/utils": "^0.0.4",
+    "@klasa/ws": "^0.0.5",
+    "fs-nextra": "^0.4.7"
+  }
+}
