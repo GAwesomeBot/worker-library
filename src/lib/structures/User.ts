@@ -73,15 +73,25 @@ export class User extends BaseStructureWithID implements AvatarStructure, Timest
 		return this.#snowflake.date;
 	}
 
+	/**
+	 * The URL to the user's avatar.
+	 * @param options URL options
+	 */
 	public avatarURL(options?: ImageURLOptions) {
 		if (this.avatarHash === null) return null;
 		return this.client.api.cdn.userAvatar(this.id, this.avatarHash, options);
 	}
 
+	/**
+	 * The URL to the user's default avatar.
+	 */
 	public get defaultAvatarURL() {
 		return this.client.api.cdn.defaultAvatar(Number(this.discriminator) % 5);
 	}
 
+	/**
+	 * The URL to the user's avatar if they have one, or their default otherwise.
+	 */
 	public dynamicAvatarURL(options?: ImageURLOptions) {
 		if (this.avatarHash === null) return this.defaultAvatarURL;
 		return this.avatarURL(options) as string;
